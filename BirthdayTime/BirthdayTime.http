@@ -1,0 +1,6 @@
+@BirthdayTime_HostAddress = http://localhost:5014
+
+GET {{BirthdayTime_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
