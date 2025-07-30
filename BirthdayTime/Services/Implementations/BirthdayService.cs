@@ -62,7 +62,6 @@ public class BirthdayService : IBirthdayService
 
         return await _context.Birthdays
             .Where(b =>
-                // День рождения между сегодня и endDate (по месяцу и дню)
                 IsBirthdayInRange(b.DateOfBirth, today, endDate))
             .OrderBy(b => b.DateOfBirth.Month).ThenBy(b => b.DateOfBirth.Day)
             .ToListAsync();
